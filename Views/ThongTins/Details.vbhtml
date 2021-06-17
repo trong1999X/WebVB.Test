@@ -3,10 +3,9 @@
     ViewData("Title") = "Details"
 End Code
 
-<h2>Details</h2>
+<div id="grad">Details Information</div>
 
-<div>
-    <h4>ThongTin</h4>
+<div> 
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -52,6 +51,11 @@ End Code
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    <div class=" btn btn-default">
+        @Html.ActionLink("Edit", "Edit", New With {.id = Model.ID})
+    </div>
+    |
+    <div class="btn btn-back">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </p>

@@ -3,13 +3,12 @@
     ViewData("Title") = "Edit"
 End Code
 
-<h2>Edit</h2>
+<div id="grad">Edit Information</div>
 
 @Using (Html.BeginForm())
     @Html.AntiForgeryToken()
     
     @<div class="form-horizontal">
-        <h4>ThongTin</h4>
         <hr />
         @Html.ValidationSummary(True, "", New With { .class = "text-danger" })
         @Html.HiddenFor(Function(model) model.ID)
@@ -62,7 +61,7 @@ End Code
     </div>
 End Using
 
-<div>
+<div class="btn btn-back">
     @Html.ActionLink("Back to List", "Index")
 </div>
 

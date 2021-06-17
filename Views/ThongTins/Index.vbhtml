@@ -2,12 +2,13 @@
 @Code
     ViewData("Title") = "Index"
 End Code
+
 <link rel="stylesheet" href="~/Content/Site.css">
 <!-- Load icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="jumbotron">
-    <h1>QUẢN LÝ THÔNG TIN BẢO HIỂM</h1>
+    <h1 style="text-align:center">MANAGEMENT PAGE</h1>
 
 </div>
 <br />
@@ -23,13 +24,15 @@ End Code
 <p>
     <br />
     <br />
-    @Html.ActionLink("Create New", "Create")
+    <div class="btn btn-functionCreate">        
+        @Html.ActionLink("Create New", "Create")   
+    </div>
 </p>
 
 <th>
 
     <Table Class="table">
-        <tr>
+        <tr style="background-color:deepskyblue; color:white">
             <th>
                 @Html.DisplayNameFor(Function(model) model.Name)
             </th>
@@ -65,10 +68,18 @@ End Code
                 <td>
                     @Html.DisplayFor(Function(modelItem) item.DateTime)
                 </td>
-                <td style="background-color:aqua">
-                    @Html.ActionLink("Edit", "Edit", New With {.id = item.ID}) |
-                    @Html.ActionLink("Details", "Details", New With {.id = item.ID}) |
-                    @Html.ActionLink("Delete", "Delete", New With {.id = item.ID})
+                <td style="background-color:white">
+                    <div class="btn btn-function">
+                        @Html.ActionLink("Edit", "Edit", New With {.id = item.ID})
+                    </div>
+                    |
+                    <div class="btn btn-function">
+                        @Html.ActionLink("Details", "Details", New With {.id = item.ID})
+                    </div>
+                    |
+                    <div class="btn btn-function">
+                        @Html.ActionLink("Delete", "Delete", New With {.id = item.ID})
+                    </div>
                 </td>
             </tr>
         Next

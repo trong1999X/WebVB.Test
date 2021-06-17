@@ -3,11 +3,10 @@
     ViewData("Title") = "Delete"
 End Code
 
-<h2>Delete</h2>
+<div id="grad">Delete Information</div>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>ThongTin</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -56,7 +55,9 @@ End Code
 
         @<div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <div class="btn btn-back">
+                @Html.ActionLink("Back to List", "Index")
+            </div>        
         </div>
     End Using
 </div>
