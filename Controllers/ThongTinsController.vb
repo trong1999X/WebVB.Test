@@ -16,15 +16,12 @@ Namespace Controllers
 
         Private db As New QuanLyCTBHEntities
 
-
-
         ' GET: ThongTins
         Async Function Index(searchBy As String, search As String) As Task(Of ActionResult)
             If searchBy = "Category" Then
-                Return View(Await db.ThongTins.Where(Function(x) x.Caterogy = search OrElse search = Nothing).ToListAsync())
-                'Return View(Await db.ThongTins.Where Like (Function(x) x.Caterogy = search OrElse search = Nothing).ToListAsync())
+                Return View(Await db.ThongTins.Where(Function(x) x.Caterogy.Contains(search) = True OrElse search = Nothing).ToListAsync())
             Else
-                Return View(Await db.ThongTins.Where(Function(y) y.Name = search OrElse search = Nothing).ToListAsync())
+                Return View(Await db.ThongTins.Where(Function(y) y.Name.Contains(search) = True OrElse search = Nothing).ToListAsync())
             End If
         End Function
 
