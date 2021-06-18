@@ -68,18 +68,19 @@ End Code
                 <td>
                     @Html.DisplayFor(Function(modelItem) item.DateTime)
                 </td>
-                <td style="background-color:white">
+                <td>
                     <div class="btn btn-function">
-                        @Html.ActionLink("Edit", "Edit", New With {.id = item.ID})
-                    </div>
-                    |
-                    <div class="btn btn-function">
-                        @Html.ActionLink("Details", "Details", New With {.id = item.ID})
-                    </div>
-                    |
-                    <div class="btn btn-function">
+                        @Html.ActionLink("Edit", "Edit", New With {.id = item.ID}) or
+                        @Html.ActionLink("Details", "Details", New With {.id = item.ID}) or
                         @Html.ActionLink("Delete", "Delete", New With {.id = item.ID})
+                    </div>                   
+                    @*<div class="btn btn-function">
+                        
                     </div>
+                    
+                    <div class="btn btn-function">
+                        
+                    </div>*@
                 </td>
             </tr>
         Next

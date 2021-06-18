@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3ab14ecde0ab4a30ae9c6f8cbfc4853a" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyCTBHModel.ThongTin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCTBHModel.ThongTin" Width="2.25" PointX="1.5" PointY="1.25" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
